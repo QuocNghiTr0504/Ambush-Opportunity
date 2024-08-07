@@ -25,11 +25,11 @@ module.exports = {
 
   deploy: {
     production: {
-      user: 'user',
+      user: 'dls',
       host: '192.168.10.124',
-      ref: 'origin/main',
-      repo: 'http://220.135.67.240:8880/ben_peng/landingpage_seo/-/tree/main.git',
-      path: '/var/www/bee/rush_profit/',
+      ref: 'origin/ambOpt',
+      repo: 'http://220.135.67.240:8880/ben_peng/cutyuanprofit.git',
+      path: '/var/www/bee/ambOpt/',
       'pre-setup': 'yarn && yarn build && pm2 reload ecosystem.config.cjs --env production',
       'post-deploy': 'sudo nginx -s reload',
     },
