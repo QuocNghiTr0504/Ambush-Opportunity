@@ -7,17 +7,17 @@ const nextEXE = path.normalize('node_modules/next/dist/bin/next')
 module.exports = {
   apps: [
     {
-      name: 'landingStyle1',
+      name: 'cutYuanProfit',
       script: nextEXE,
       env_development: {
         NODE_ENV: 'development',
         args: 'dev',
-        PORT: 3081,
+        PORT: 3083,
       },
       env: {
         NODE_ENV: 'production',
         args: 'start',
-        PORT: 3083,
+        PORT: 3084,
       },
     },
 
