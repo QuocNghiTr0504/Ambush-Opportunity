@@ -3,8 +3,8 @@ import CryptoJS from 'crypto-js';
 
 // Provided by the system
 const name = 'AMBUSHOPPORTUNITY';
-const key = 'C39RZVZaYr2Ah3UBqYrpBF?33rPmas@F';
-const apiKey = 'Gt!aP7#NeXqBMpd6!=eaVeu#5SaTVrRt';
+const key = 'Gt!aP7#NeXqBMpd6!=eaVeu#5SaTVrRt';
+const apiKey = 'C39RZVZaYr2Ah3UBqYrpBF?33rPmas@F';
 
 export function encrypt(text: string, key: string) {
     var iv = CryptoJS.lib.WordArray.random(16);
