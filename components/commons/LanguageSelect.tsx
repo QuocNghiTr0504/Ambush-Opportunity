@@ -10,6 +10,7 @@ import { isSupportedLocale, SupportedLocale } from '@/helpers/langHelper';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { isClient } from '@/helpers/apiHelper';
+import { LocalizedLink } from './LocalizedLink';
 
 
 const flags: any = {
@@ -73,39 +74,39 @@ export const LanguageSelect = () => {
                                     <li
                                         className=' cursor-pointer px-1 py-1 text-sm hover:bg-gray-100 h-8'
                                     >
-                                        <Link href={'/vi-VN'} hrefLang='/vi-VN' className='flex items-center'>
+                                        <LocalizedLink href={'/vi-VN'} className='flex items-center'>
                                             <Image
                                                 src={VN}
                                                 alt=''
                                                 className='w-4 h-4 mr-3'
                                             />
                                             VN
-                                        </Link>
+                                        </LocalizedLink>
 
                                     </li>
                                     <li
                                         className='flex items-center cursor-pointer px-1 py-1 text-sm hover:bg-gray-100 h-8'
                                     >
-                                        <Link href={'/en-US'} hrefLang='en-US' className='flex items-center'>
+                                        <LocalizedLink href={'/en-US'} className='flex items-center'>
                                             <Image
                                                 src={UK}
                                                 alt=''
                                                 className='w-4 h-4 mr-3'
                                             />
                                             US
-                                        </Link>
+                                        </LocalizedLink>
                                     </li>
                                     <li
                                         className='flex items-center cursor-pointer px-1 py-1 text-sm hover:bg-gray-100 h-8'
                                     >
-                                        <Link href={'/zh-CN'} hrefLang='zh-CN' className='flex items-center'>
+                                        <LocalizedLink href={'/zh-CN'} className='flex items-center'>
                                             <Image
                                                 src={TW}
                                                 alt=''
                                                 className='w-4 h-4 mr-3'
                                             />
                                             TW
-                                        </Link>
+                                        </LocalizedLink>
                                     </li>
                                 </ul>
                             </motion.div>

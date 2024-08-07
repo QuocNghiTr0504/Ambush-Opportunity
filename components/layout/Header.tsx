@@ -14,6 +14,7 @@ import { breakpoints } from "@/constants/Breakpoint";
 import NavMenu from "../drawers/NavMenu";
 import { usePathname } from "next/navigation";
 import { SystemColor as SystemColor } from "@/constants/Color";
+import { LocalizedLink } from "../commons/LocalizedLink";
 export default function NavHeader() {
     const { isAuthenticated, userInfo } = useSelector((state: RootState) => state.auth)
     const pathname = usePathname()
@@ -70,40 +71,36 @@ export default function NavHeader() {
 
                 <ul style={{ color: SystemColor.navLink }} className={`flex gap-16`}>
                     <li>
-                        <Link
+                        <LocalizedLink
                             href='/about'
-                            prefetch
                             className=' text-lg'
                         >
                             About
-                        </Link>
+                        </LocalizedLink>
                     </li>
                     <li>
-                        <Link
-                            prefetch
+                        <LocalizedLink
                             href='/contact'
                             className=' text-lg'
                         >
                             Contact
-                        </Link>
+                        </LocalizedLink>
                     </li>
                     <li>
-                        <Link
-                            prefetch
+                        <LocalizedLink
                             href='/contact'
                             className=' text-lg'
                         >
                             Price
-                        </Link>
+                        </LocalizedLink>
                     </li>
                     <li>
-                        <Link
-                            prefetch
+                        <LocalizedLink
                             href='/contact'
                             className=' text-lg'
                         >
                             Why us?
-                        </Link>
+                        </LocalizedLink>
                     </li>
 
 
@@ -116,22 +113,20 @@ export default function NavHeader() {
         return (
             <ul style={{ color: SystemColor.navLink }} className={`flex  space-x-4`}>
                 <li>
-                    <Link
+                    <LocalizedLink
                         href='/login'
-                        prefetch
                         className=' text-lg'
                     >
                         Sign in
-                    </Link>
+                    </LocalizedLink>
                 </li>
                 <li>
-                    <Link
-                        prefetch
+                    <LocalizedLink
                         href='/register'
                         className=' text-lg'
                     >
                         Sign up
-                    </Link>
+                    </LocalizedLink>
                 </li>
             </ul>
         )
@@ -141,13 +136,13 @@ export default function NavHeader() {
             <div className='container mx-auto h-[100px] w-full'>
                 <div className='h-full flex flex-wrap items-center align-middle justify-between'>
 
-                    <Link prefetch href='/'>
+                    <LocalizedLink href='/'>
                         <Image
                             className="max-h-[70px] w-auto object-cover"
                             src={logo}
                             alt='Logo'
                         />
-                    </Link>
+                    </LocalizedLink>
 
                     {
                         !(isMdScreen || isXsScreen || isSmScreen) &&

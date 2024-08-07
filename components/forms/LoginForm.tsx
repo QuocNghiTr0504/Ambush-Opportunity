@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form"
 import { useDispatch, useSelector } from "react-redux";
+import { LocalizedLink } from "../commons/LocalizedLink";
 
 
 export const LoginForm = () => {
@@ -62,9 +63,9 @@ export const LoginForm = () => {
                 <div className="text-center">
                     <p className="mt-2 text-sm text-gray-600">
                         Don&apos;t have an account?{' '}
-                        <Link prefetch href="/register" className="text-indigo-500 hover:text-indigo-600">
+                        <LocalizedLink href="/register" className="text-indigo-500 hover:text-indigo-600">
                             Register here
-                        </Link>
+                        </LocalizedLink>
                     </p>
                 </div>
             </div>

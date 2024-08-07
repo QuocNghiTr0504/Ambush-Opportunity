@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MenuOutlined } from '@ant-design/icons';
 import { Drawer, Menu, Button } from 'antd';
 import Link from 'next/link';
+import { LocalizedLink } from '../commons/LocalizedLink';
 
 const NavMenu = () => {
     const [visible, setVisible] = useState(false);
@@ -25,36 +26,36 @@ const NavMenu = () => {
             >
                 <Menu mode="inline">
                     <Menu.Item key="1">
-                        <Link
+                        <LocalizedLink
                             href='/about'
                             className='text-gray-700 text-2xl hover:text-red-900'
                         >
                             <p className='text-lg'>About</p>
-                        </Link>
+                        </LocalizedLink>
                     </Menu.Item>
                     <Menu.Item key="2">
-                        <Link
+                        <LocalizedLink
                             href='/contact'
                             className='text-gray-700 text-2xl hover:text-red-900'
                         >
                             <p className='text-lg'>Contact</p>
-                        </Link>
+                        </LocalizedLink>
                     </Menu.Item>
                     <Menu.Item key="3">
-                        <Link
+                        <LocalizedLink
                             href='/login'
                             className='text-gray-700 text-2xl hover:text-red-900'
                         >
                             <p className='text-lg'>Login</p>
-                        </Link>
+                        </LocalizedLink>
                     </Menu.Item>
                     <Menu.Item key="4">
-                        <Link
+                        <LocalizedLink
                             href='/register'
                             className='text-gray-700 text-2xl hover:text-red-900'
                         >
                             <p className='text-lg'>Sign-up</p>
-                        </Link>
+                        </LocalizedLink>
                     </Menu.Item>
 
 

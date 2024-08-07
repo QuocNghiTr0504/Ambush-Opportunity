@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion'
 import { staggerVariants } from '@/constants/StaggerVariant';
 import { Reveal } from '@/components/animations/Reveal';
+import { LocalizedLink } from '@/components/commons/LocalizedLink';
 export const GeneralInformation = () => {
   const backgroundStyle = {
     backgroundImage: `url(${Background})`,
@@ -38,9 +39,12 @@ export const GeneralInformation = () => {
             <Image alt='' className='object-cover h-[450px] w-auto' src={Background}></Image>
             <div className='w-full flex items-center justify-center'>
               <Reveal>
-                <Button>{t('ButtonAtGen')}</Button>
+                <LocalizedLink href='/register'>
+                  <Button>
+                    {t('ButtonAtGen')}
+                  </Button>
+                </LocalizedLink>
               </Reveal>
-
             </div>
           </div>
         </div>

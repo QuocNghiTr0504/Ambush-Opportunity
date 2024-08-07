@@ -9,6 +9,7 @@ import { AppDispatch } from "@/redux/store";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import CountrySelect from "../commons/CountrySelect";
+import { LocalizedLink } from "../commons/LocalizedLink";
 
 export const RegisterForm = () => {
     const { register, handleSubmit, setValue, setError, formState: { errors } } = useForm<IRegisterInfo>();
@@ -117,9 +118,9 @@ export const RegisterForm = () => {
                 <div className="text-center mt-4">
                     <p className="text-sm text-gray-600">
                         Already have an account?{' '}
-                        <Link href="/login" className="text-indigo-500 hover:text-indigo-600">
+                        <LocalizedLink href="/login" className="text-indigo-500 hover:text-indigo-600">
                             Login here
-                        </Link>
+                        </LocalizedLink>
                     </p>
                 </div>
             </div>
