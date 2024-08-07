@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export async function generateMetadata({ params }: { params: { locale: SupportedLocale } }): Promise<Metadata> {
     const locale = params.locale;
     return {
-        title: "Ambush Opportunity",
+        title: "Smartfinance",
         description: "ambushopportunity.uk - Acquire Extensive Financial Knowledge",
         keywords: getLocalizedKeyword(locale),
         openGraph: {

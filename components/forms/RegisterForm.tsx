@@ -45,7 +45,7 @@ export const RegisterForm = () => {
                             id="countryCode"
                             {...register('countryCode', { required: 'countryCode is required' })}
                             required
-                            className="w-full hidden px-4 py-2 h-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full hidden px-4 py-2 h-full border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             placeholder="0 121 777 511"
                         />
                         {errors.countryCode && <p className="text-red-500 text-sm">{errors.countryCode.message}</p>}
@@ -56,7 +56,7 @@ export const RegisterForm = () => {
                             id="username"
                             placeholder="Username"
                             {...register('username', { required: 'Username is required' })}
-                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             required
                         />
                         {errors.username && <p className="text-red-500 text-sm">{errors.username.message}</p>}
@@ -67,7 +67,7 @@ export const RegisterForm = () => {
                             placeholder="Email"
                             id="email"
                             {...register('email', { required: 'Email is required' })}
-                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             required
                         />
                         {errors.email && <p className="text-red-500 text-sm">{errors.email.message}</p>}
@@ -78,7 +78,7 @@ export const RegisterForm = () => {
                             placeholder="Password"
                             id="password"
                             {...register('password', { required: 'Password is required' })}
-                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             required
                         />
                         {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
@@ -89,7 +89,7 @@ export const RegisterForm = () => {
                             type="text"
                             id="phone"
                             {...register('phoneNumber', { required: 'Phone is required' })}
-                            className="w-full px-4 py-2 h-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full px-4 py-2 h-full border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             required
                             placeholder="0 121 777 511"
                         />
@@ -98,7 +98,7 @@ export const RegisterForm = () => {
                             type="text"
                             id="countryCallingCode"
                             {...register('countryCallingCode', { required: 'countryCallingCode is required' })}
-                            className="w-full hidden px-4 py-2 h-full border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full hidden px-4 py-2 h-full border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             required
                             placeholder="0 121 777 511"
                         />
@@ -109,7 +109,7 @@ export const RegisterForm = () => {
 
                     <button
                         type="submit"
-                        className="block w-full p-3 text-center text-white rounded-md bg-gradient-to-r from-green-500 to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext hover:shadow-xl"
+                        className="block w-full p-3 text-center text-white rounded-md bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext hover:shadow-xl"
                     >
                         Sign up
                     </button>
@@ -117,7 +117,7 @@ export const RegisterForm = () => {
                 <div className="text-center mt-4">
                     <p className="text-sm text-gray-600">
                         Already have an account?{' '}
-                        <Link href="/login" className="text-green-500 hover:text-green-600">
+                        <Link href="/login" className="text-extratext hover:text-maintext hover:shadow-maintext">
                             Login here
                         </Link>
                     </p>

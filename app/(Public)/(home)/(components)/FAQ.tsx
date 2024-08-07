@@ -25,7 +25,7 @@ const FAQ = () => {
       <div className='grid grid-cols-1 md:grid-cols-7 gap-8 w-full cursor-pointer justify-center items-center'>
           <div className='col-span-2 hidden md:block lg:block text-center'>
             <ArrowRightOutlined style={{
-                color:'#7ed843',
+                color:'#ecc012',
                 fontSize: '100px', 
                 margin: '2px',
                 textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' 

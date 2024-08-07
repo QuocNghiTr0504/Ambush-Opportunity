@@ -68,7 +68,7 @@ export const ExploreForm = () => {
                     {errors.termOfUse && <p className="text-red-600 text-sm">{errors.termOfUse.message}</p>}
                     <button
                         type="submit"
-                        className="w-full p-3 text-white bg-gradient-to-r from-green-500 to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext  rounded-md shadow-lg transition-colors duration-200"
+                        className="w-full p-3 text-white bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext  rounded-md shadow-lg transition-colors duration-200"
                     >
                         Learn more
                     </button>

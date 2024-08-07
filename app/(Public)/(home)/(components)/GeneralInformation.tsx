@@ -2,7 +2,7 @@
 import { Button } from '@/components/commons/Button';
 import { Title } from '@/components/commons/Title';
 import { useTranslation } from 'react-i18next';
-import Background from '@/public/assets/images/home/education_invest.jpg';
+import Background from '@/public/assets/images/home/test.png';
 import Image from 'next/image';
 import { motion } from 'framer-motion'
 import { staggerVariants } from '@/constants/StaggerVariant';

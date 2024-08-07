@@ -7,14 +7,15 @@ import { CSSProperties, useEffect, useState } from "react";
 import Link from "next/link";
 import { LanguageSelect } from "@/components/commons/LanguageSelect";
 import { Header } from "antd/es/layout/layout"
-import logo from '@/public/assets/images/logo-head.png';
+import logo from '@/public/assets/images/header_logo.png';
 import Image from "next/image";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { breakpoints } from "@/constants/Breakpoint";
 import NavMenu from "../drawers/NavMenu";
 import { usePathname } from "next/navigation";
 import { SystemColor as SystemColor } from "@/constants/Color";
-export default function NavHeader() {
+export default function 
+NavHeader() {
     const { isAuthenticated, userInfo } = useSelector((state: RootState) => state.auth)
     const pathname = usePathname()
 
@@ -75,7 +76,7 @@ export default function NavHeader() {
                              className='text-xl relative group inline-block'
                         >
                             About
-                            <span className="absolute left-0 bottom-0 h-1 w-full bg-[#7ed843] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 translate-y-2"></span>
+                            <span className="absolute left-0 bottom-0 h-1 w-full bg-maintext scale-x-0 group-hover:scale-x-100 transition-transform duration-300 translate-y-2"></span>
                         </Link>
                     </li>
                     <li>
@@ -85,7 +86,7 @@ export default function NavHeader() {
                             className='text-xl relative group inline-block'
                         >
                             Contact
-                            <span className="absolute left-0 bottom-0 h-1 w-full bg-[#7ed843] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 translate-y-2"></span>
+                            <span className="absolute left-0 bottom-0 h-1 w-full bg-maintext scale-x-0 group-hover:scale-x-100 transition-transform duration-300 translate-y-2"></span>
                         </Link>
                     </li>
                     <li>
@@ -95,7 +96,7 @@ export default function NavHeader() {
                             className='text-xl relative group inline-block'
                         >
                             Price
-                            <span className="absolute left-0 bottom-0 h-1 w-full bg-[#7ed843] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 translate-y-2"></span>
+                            <span className="absolute left-0 bottom-0 h-1 w-full bg-maintext scale-x-0 group-hover:scale-x-100 transition-transform duration-300 translate-y-2"></span>
                         </Link>
                     </li>
                     <li>
@@ -105,7 +106,7 @@ export default function NavHeader() {
                             className='text-xl relative group inline-block'
                         >
                             Why us?
-                            <span className="absolute left-0 bottom-0 h-1 w-full bg-[#7ed843] scale-x-0 group-hover:scale-x-100 transition-transform duration-500 translate-y-2"></span>
+                            <span className="absolute left-0 bottom-0 h-1 w-full bg-maintext scale-x-0 group-hover:scale-x-100 transition-transform duration-500 translate-y-2"></span>
                         </Link>
                     </li>
 
@@ -122,7 +123,7 @@ export default function NavHeader() {
                     <Link
                         href='/login'
                         prefetch
-                        className='text-xl bg-gradient-to-r from-green-500 to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext border border-transparent rounded-lg p-2 shadow-md hover:shadow-lg transition-shadow duration-300'
+                        className='text-xl bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext border border-transparent rounded-lg p-2 shadow-md hover:shadow-lg transition-shadow duration-300'
                     >
                         Sign in
                     </Link> 
@@ -131,7 +132,7 @@ export default function NavHeader() {
                     <Link
                         prefetch
                         href='/register'
-                        className='text-xl bg-gradient-to-r from-green-500 to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext border border-transparent rounded-lg p-2 shadow-md hover:shadow-lg transition-shadow duration-300'
+                        className='text-xl bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext border border-transparent rounded-lg p-2 shadow-md hover:shadow-lg transition-shadow duration-300'
                     >
                         Sign up
                     </Link>

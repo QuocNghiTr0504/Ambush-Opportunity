@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/favicon.ico",
+        url: "favicon.ico",
         type: "image/x-icon"
       },
       {
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     ],
     shortcut: [
       {
-        url: "/favicon.ico",
+        url: "https://i.imgur.com/6tQt63a.png",
         type: "image/x-icon"
       }
     ],

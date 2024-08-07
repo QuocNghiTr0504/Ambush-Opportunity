@@ -17,12 +17,12 @@ export const ContactForm = () => {
               type="text"
               id="firstname"
               {...register("name", { required: "First name is required" })}
-              className="peer z-0 w-full px-4 py-3 pt-6 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-transparent"
+              className="peer z-0 w-full px-4 py-3 pt-6 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext placeholder-transparent"
               placeholder=" "
             />
             <label
               htmlFor="firstname"
-              className="absolute top-0 left-4 text-gray-600 transition-transform duration-300 transform -translate-y-1/2 scale-85 origin-left peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-focus:z-10 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-green-500"
+              className="absolute top-0 left-4 text-gray-600 transition-transform duration-300 transform -translate-y-1/2 scale-85 origin-left peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-focus:z-10 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-maintext"
             >
               First Name
             </label>
@@ -36,12 +36,12 @@ export const ContactForm = () => {
               type="email"
               id="email"
               {...register("email", { required: "Email is required" })}
-              className="peer w-full px-4 py-3 pt-6 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:z-10 placeholder-transparent"
+              className="peer w-full px-4 py-3 pt-6 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext focus:z-10 placeholder-transparent"
               placeholder=" "
             />
             <label
               htmlFor="email"
-              className="absolute top-0 left-4 text-gray-600 transition-transform duration-300 transform -translate-y-1/2 scale-85 origin-left peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-green-500"
+              className="absolute top-0 left-4 text-gray-600 transition-transform duration-300 transform -translate-y-1/2 scale-85 origin-left peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-maintext"
             >
               Email
             </label>
@@ -55,12 +55,12 @@ export const ContactForm = () => {
               id="message"
               {...register("message", { required: "Message is required" })}
               rows={5}
-              className="peer w-full px-4 py-3 pt-6 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 placeholder-transparent"
+              className="peer w-full px-4 py-3 pt-6 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext placeholder-transparent"
               placeholder=" "
             ></textarea>
             <label
               htmlFor="message"
-              className="absolute top-0 left-4 text-gray-600 transition-transform duration-300 transform -translate-y-1/2 scale-85 origin-left peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-green-500"
+              className="absolute top-0 left-4 text-gray-600 transition-transform duration-300 transform -translate-y-1/2 scale-85 origin-left peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-maintext"
             >
               Your Message
             </label>
@@ -71,7 +71,7 @@ export const ContactForm = () => {
 
           <button
             type="submit"
-            className="uppercase font-bold block w-full py-4 text-center text-white bg-green-500 rounded-md hover:bg-green-600"
+            className="uppercase font-bold block w-full py-4 text-center text-white bg-maintext rounded-md hover:bg-extratext"
           >
             Send Message
           </button>

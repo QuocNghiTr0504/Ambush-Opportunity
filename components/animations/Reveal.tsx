@@ -43,7 +43,7 @@ export const Reveal: React.FC<Props> = ({ children, width = 'fit-content', mode 
                         right: 0,
                         bottom: 0,
                         left: 0,
-                        backgroundColor: '#7ed843',
+                        backgroundColor: '#ecc012',
                         zIndex: 1
                     }}
                     variants={revealVariant}

@@ -34,7 +34,7 @@ export const LoginForm = () => {
                             id="firstname"
                             placeholder="Username"
                             {...register('email', { required: 'Username is required' })}
-                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             required
                         />
                         {errors.email && <p className="text-red-500 text-sm">{errors.email?.message}</p>}
@@ -45,7 +45,7 @@ export const LoginForm = () => {
                             placeholder="Password"
                             id="password"
                             {...register('password', { required: 'Password is required' })}
-                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             required
                         />
                         {errors.password && <p className="text-red-500 text-sm">{errors.password?.message}</p>}
@@ -53,7 +53,7 @@ export const LoginForm = () => {
 
                     <button
                         type="submit"
-                        className="block w-full p-3 text-center text-white bg-gradient-to-r from-green-500 to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext hover:shadow-xl"
+                        className="block w-full p-3 text-center text-white bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-extratext hover:shadow-xl"
                     >
                         Sign in
                     </button>
@@ -62,7 +62,7 @@ export const LoginForm = () => {
                 <div className="text-center">
                     <p className="mt-2 text-sm text-gray-600">
                         Don&apos;t have an account?{' '}
-                        <Link prefetch href="/register" className="text-green-500 hover:text-maintext">
+                        <Link prefetch href="/register" className="text-maintext hover:text-extratext">
                             Register here
                         </Link>
                     </p>

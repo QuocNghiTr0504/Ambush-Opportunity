@@ -1,7 +1,7 @@
 import { Footer } from "antd/es/layout/layout"
 import Image from "next/image"
 import Link from "next/link"
-import logo from '@/public/assets/images/logo-head.png';
+import logo from '@/public/assets/images/footer_logo.png';
 import { SystemColor } from "@/constants/Color";
 
 
@@ -14,11 +14,11 @@ export default function WebFooter() {
                         <div className="col-span-full mb-10 lg:col-span-2 lg:mb-0">
                             <div className="flex justify-center lg:justify-start gap-2 items-center my-auto">
                                 <Image
-                                    className="max-h-[100px] relative  w-auto "
+                                    className="max-h-[80px] relative  w-auto "
                                     src={logo}
                                     alt="Logo"
                                 />
-                                <span className="uppercase font-bold text-2xl text-white tracking-widest">Ambush Opportunity</span>        
+                                {/* <span className="uppercase font-bold text-2xl text-white tracking-widest">Ambush Opportunity</span>         */}
                             </div>
                         </div>
                         

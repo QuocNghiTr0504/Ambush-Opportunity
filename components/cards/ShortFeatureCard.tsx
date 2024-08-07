@@ -13,7 +13,7 @@ export const ShortFeatureCard: React.FC<Props> = ({ title, content }: Props) => 
             <div className='px-8 py-1 bg-transperant rounded-lg shadow-sm h-fit bg-'>
                 <div className='flex gap-6'>
                 <CheckCircleOutlined style={{
-                    color: '#7ed843', 
+                    color: '#ecc012', 
                     fontSize: '24px', 
                     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)',
                 }} />

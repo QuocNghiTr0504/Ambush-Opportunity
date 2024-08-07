@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import Background from '@/public/assets/images/home/why_register_main.jpeg'; 
+import Background from '@/public/assets/images/home/why_register_main.png'; 
 import { Title } from '@/components/commons/Title';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
