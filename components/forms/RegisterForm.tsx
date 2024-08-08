@@ -109,7 +109,7 @@ export const RegisterForm = () => {
 
                     <button
                         type="submit"
-                        className="block w-full p-3 text-center text-white rounded-md bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext hover:shadow-xl"
+                        className="block w-full p-3 text-center text-white rounded-md bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext hover:shadow-xl transition-shadow duration-300"
                     >
                         Sign up
                     </button>

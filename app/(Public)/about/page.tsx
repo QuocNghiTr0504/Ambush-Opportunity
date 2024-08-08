@@ -10,6 +10,8 @@ import Image from 'next/image';
 import { SystemColor } from '@/constants/Color';
 import Link from 'next/link';
 
+import {HeatMapOutlined} from '@ant-design/icons'
+
 export default function AboutPage() {
   const { t } = useTranslation();
 
@@ -26,8 +28,8 @@ export default function AboutPage() {
     >
       <div className='my-16'>
       </div>
-      <div className='container mx-auto grid grid-cols-3 gap-4 mb-5'>
-        <div className='col-span-2'>
+      <div className='container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-4 mb-5'>
+        <div className='col-span-2 mx-5 w-[90%]'>
           <div className='h-full flex items-center justify-center'>
             <div className='w-full'>
               <h1 className='text-3xl font-bold'>{t('TitSmAtAboutPage')}</h1>
@@ -48,14 +50,10 @@ export default function AboutPage() {
         </div>
       </div>
 
-      <div className='container text-black mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 my-20'>
+      <div className='container text-black mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 my-20 shadow-xl'>
         <div className='px-8 py-6 bg-white rounded-lg shadow-lg'>
           <div className='flex gap-6'>
-            <Image
-              className='object-contain'
-              src={CheckIcon}
-              alt=''
-            ></Image>
+            <HeatMapOutlined style={{color:'#ecc012', fontSize: '30px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}  />
             <p className='font-bold text-2xl my-4'>{t('TitBor1AtAboutPage')}</p>
           </div>
           <p className='text-xl'>{t('TextBor1AtAboutPage')}</p>
@@ -67,18 +65,14 @@ export default function AboutPage() {
           )}
           <button
             onClick={handleReadMore}
-            className='mt-3 text-blue-500 text-lg'
+            className='mt-3 text-maintext text-lg'
           >
             {isReadMore ? t('ButSmLessAtAboutPage') : t('ButSmMoreAtAboutPage')}
           </button>
         </div>
         <div className='px-8 py-6 bg-white rounded-lg shadow-lg'>
           <div className='flex gap-6'>
-            <Image
-              className='object-contain'
-              src={CheckIcon}
-              alt=''
-            ></Image>
+            <HeatMapOutlined style={{color:'#ecc012', fontSize: '30px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}  />
             <p className='font-bold text-2xl my-4'>{t('TitBor2AtAboutPage')}</p>
           </div>
           <p className='text-xl'>{t('TextBor2AtAboutPage')}</p>

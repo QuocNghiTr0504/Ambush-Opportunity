@@ -8,7 +8,7 @@ const Loading = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 z-50"
+            className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-extratext to-maintext z-50"
         >
             <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}

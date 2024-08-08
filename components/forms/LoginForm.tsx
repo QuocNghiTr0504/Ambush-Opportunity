@@ -53,7 +53,7 @@ export const LoginForm = () => {
 
                     <button
                         type="submit"
-                        className="block w-full p-3 text-center text-white bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-extratext hover:shadow-xl"
+                        className="block w-full p-3 text-center text-white bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-extratext hover:shadow-xl transition-shadow duration-300"
                     >
                         Sign in
                     </button>

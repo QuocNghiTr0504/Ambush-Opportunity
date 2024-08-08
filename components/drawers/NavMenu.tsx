@@ -16,12 +16,13 @@ const NavMenu = () => {
 
     return (
         <div>
-            <Button type="primary" onClick={showDrawer} icon={<MenuOutlined />} />
+            <Button  className='bg-maintext' onClick={showDrawer} icon={<MenuOutlined />} />
             <Drawer
                 title="Menu"
                 placement="right"
                 onClose={closeDrawer}
                 visible={visible}
+                className='text-maintext'
             >
                 <Menu mode="inline">
                     <Menu.Item key="1">

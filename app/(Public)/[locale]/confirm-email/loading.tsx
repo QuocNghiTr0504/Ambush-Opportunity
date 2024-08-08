@@ -27,7 +27,7 @@ const Loading = () => {
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white">
             <motion.div className="flex items-center justify-center">
                 <svg
-                    className="h-12 w-12 text-blue-500 mr-3"
+                    className="h-12 w-12 text-maintext mr-3"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"

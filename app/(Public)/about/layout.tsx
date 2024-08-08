@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Ambush Opportunity - About",
+    title: "Smartfinance - About",
     description:
         "ambushopportunity.uk - About us",
     keywords: [

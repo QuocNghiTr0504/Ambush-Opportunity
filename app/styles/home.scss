@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: radial-gradient(ellipse at bottom, #0d3126 0%, #0c130f 100%);
+  background: radial-gradient(ellipse at bottom, #494814 0%, #91918f 100%);
   overflow: hidden;
 }
 
@@ -30,7 +30,7 @@
 
 .star {
   $star-count: 100;
-  --star-color: hsl(155, 68%, 58%);
+  --star-color: hsl(59, 68%, 58%);
   ;
   --star-tail-length: 6em;
   --star-tail-height: 2px;

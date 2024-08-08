@@ -22,7 +22,7 @@ export const ExploreForm = () => {
                             id="firstname"
                             placeholder="First name"
                             {...register('firstname', { required: 'Firstname is required' })}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-maintext"
                         />
                         {errors.firstname && <p className="text-red-600 text-sm">{errors.firstname.message}</p>}
                     </div>
@@ -32,7 +32,7 @@ export const ExploreForm = () => {
                             id="lastname"
                             placeholder="Last name"
                             {...register('lastname', { required: 'Last name is required' })}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-maintext"
                         />
                         {errors.lastname && <p className="text-red-600 text-sm">{errors.lastname.message}</p>}
                     </div>
@@ -42,7 +42,7 @@ export const ExploreForm = () => {
                             id="email"
                             placeholder="Email"
                             {...register('email', { required: 'Email is required' })}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-maintext"
                         />
                         {errors.email && <p className="text-red-600 text-sm">{errors.email.message}</p>}
                     </div>
@@ -52,14 +52,14 @@ export const ExploreForm = () => {
                             id="phone"
                             placeholder="Phone number"
                             {...register('phone', { required: 'Phone number is required' })}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-maintext"
                         />
                         {errors.phone && <p className="text-red-600 text-sm">{errors.phone.message}</p>}
                     </div>
                     <div className="flex items-start space-x-2">
                         <Checkbox 
                             {...register('termOfUse', { required: 'You must agree with the terms of use' })}
-                            className="accent-green-500"
+                            className="accent-maintext text-maintext"
                         />
                         <p className="text-sm text-gray-700">
                             I agree to share my personal data (full name, email address, and phone number) with the partners of Ambush Opportunity for their own purposes. Ambush Opportunity&apos;s partners are investment education firms, data brokers, and intermediaries. To find out more about the processing of your personal data and your rights, please consult our Data Privacy Notice.
@@ -68,7 +68,7 @@ export const ExploreForm = () => {
                     {errors.termOfUse && <p className="text-red-600 text-sm">{errors.termOfUse.message}</p>}
                     <button
                         type="submit"
-                        className="w-full p-3 text-white bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext  rounded-md shadow-lg transition-colors duration-200"
+                        className="w-full p-3 text-white bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext rounded-md shadow-xl transition-shadow duration-300"
                     >
                         Learn more
                     </button>

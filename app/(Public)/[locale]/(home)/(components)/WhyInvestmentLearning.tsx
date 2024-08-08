@@ -25,14 +25,14 @@ export const WhyInvestmentLearning = () => {
           </div>
           <div className='my-8 w-full  grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-12'>
             <div className='rounded-lg p-8 shadow-md bg-gray-50'>
-              <div className=' flex justify-center  py-4'>
+              <div className='flex justify-center py-4'>
                 <div style={{
                   display: 'flex', 
                   alignItems: 'center', 
                   justifyContent: 'center', 
                   width: '100px', 
                   height: '100px', 
-                  backgroundColor: '#7ed843',
+                  backgroundColor: '#ebc012',
                   borderRadius: '50%', 
                   padding: '10px'
                 }}>
@@ -47,14 +47,14 @@ export const WhyInvestmentLearning = () => {
               </div>
             </div>
             <div className='rounded-lg p-8 shadow-md bg-gray-50'>
-              <div className=' flex justify-center  py-4'>
+              <div className=' flex justify-center py-4'>
                 <div style={{
                     display: 'flex', 
                     alignItems: 'center', 
                     justifyContent: 'center', 
                     width: '100px', 
                     height: '100px', 
-                    backgroundColor: '#7ed843', 
+                    backgroundColor: '#ebc012',
                     borderRadius: '50%', 
                     padding: '10px'
                   }}>
@@ -76,7 +76,7 @@ export const WhyInvestmentLearning = () => {
                     justifyContent: 'center', 
                     width: '100px', 
                     height: '100px', 
-                    backgroundColor: '#7ed843', 
+                    backgroundColor: '#ebc012', 
                     borderRadius: '50%', 
                     padding: '10px'
                   }}>
@@ -94,7 +94,7 @@ export const WhyInvestmentLearning = () => {
         </div>
         <div className='empowerment absolute bottom-[-50px] right-0 z-0'>
                     <svg preserveAspectRatio="xMidYMid slice" viewBox="10 10 80 80">
-                        <path fill="#7ed843" className="out-bottom" d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z" />
+                        <path fill="#ebc012" className="out-bottom" d="M105.9,48.6c-12.4-8.2-29.3-4.8-39.4.8-23.4,12.8-37.7,51.9-19.1,74.1s63.9,15.3,76-5.6c7.6-13.3,1.8-31.1-2.3-43.8C117.6,63.3,114.7,54.3,105.9,48.6Z" />
                         <path fill="#f5f5f5" className="in-bottom" d="M102,67.1c-9.6-6.1-22-3.1-29.5,2-15.4,10.7-19.6,37.5-7.6,47.8s35.9,3.9,44.5-12.5C115.5,92.6,113.9,74.6,102,67.1Z" />
                     </svg>
         </div>

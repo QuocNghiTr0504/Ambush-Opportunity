@@ -22,8 +22,6 @@ const Management = () => {
         <div className='col-span-1'>
           <div className='h-full flex relative top-[50px] z-[0] items-center justify-center w-full'>
             <Reveal>
-
-
               <Image
                 src={ManaImg}
                 alt='management'
@@ -73,7 +71,7 @@ const Management = () => {
               )}
               <button
                 onClick={handleReadMore}
-                className='mt-3 text-green-500 text-lg'
+                className='mt-3 text-maintext text-lg'
               >
                 {isReadMore ? t('ButLessAtMana') : t('ButMoreAtMana')}
               </button>

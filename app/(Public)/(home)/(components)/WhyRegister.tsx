@@ -15,7 +15,7 @@ export const WhyRegister = () => {
     return (
         <section className='h-full relative'>
             <div className='mx-auto'>
-                <div className='md:rounded-xl shadow-xl  bg-[#2d443d] p-20'>
+                <div className='md:rounded-xl shadow-xl  bg-mainbg p-20'>
                     <div className="flex items-center space-x-2">
                         <Reveal>
                             <Title className='tracking-wider text-maintext'>

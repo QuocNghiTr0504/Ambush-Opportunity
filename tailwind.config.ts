@@ -15,11 +15,11 @@ const config: Config = {
       },
       colors:{
         'maintext': '#ecc012',
-        'extratext': '#d8b214'
+        'extratext': '#ffed3e'
 
       },
       backgroundColor: {
-        'mainbg' : '#2d443d',
+        'mainbg' : '#44422d',
       },
       
 

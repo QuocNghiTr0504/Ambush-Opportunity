@@ -20,7 +20,7 @@ const TopProgressBar: React.FC = () => {
 
     return (
         <div className={`fixed top-0 left-0 h-[3px] w-full z-[1000] ${visible ? 'visible' : 'invisible'} `}>
-            <div style={{ width: `${percent}%` }} className='transition-[width] duration-1000 h-full bg-blue-600' />
+            <div style={{ width: `${percent}%` }} className='transition-[width] duration-1000 h-full bg-maintext' />
         </div>
     );
 };

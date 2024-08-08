@@ -1,6 +1,6 @@
 export const SystemColor = {
     'primaryButton': '#3b86ff',
-    'grayBackground': '#151c1e',
+    'grayBackground': '#161921',
     'navLink': '#fff',
-    'footerBackground': '#151c1e'
+    'footerBackground': '#161921'
 }

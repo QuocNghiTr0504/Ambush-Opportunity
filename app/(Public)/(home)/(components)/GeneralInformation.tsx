@@ -18,7 +18,7 @@ export const GeneralInformation = () => {
   return (
     <section className='w-full relative top-[-50px] z-10 mx-auto' >
       <motion.div variants={staggerVariants} whileInView="in" initial="initial" exit="out" className='bg-gray-50 shadow-2xl container rounded-lg p-20  mx-auto'>
-        <Title className='tracking-wider'>{t('TitleAtGenerall')}</Title>
+        <Title className='tracking-wider ml-12'>{t('TitleAtGenerall')}</Title>
         <div className='grid justify-items-center grid-cols-1 lg:grid-cols-7'>
           <div className='lg:col-span-4'>
             <Reveal>
