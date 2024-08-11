@@ -15,8 +15,8 @@ const config: Config = {
       },
       colors:{
         'maintext': '#ecc012',
-        'extratext': '#ffed3e'
-
+        'extratext': '#ffed3e',
+        'mainbg' : '#44422d',
       },
       backgroundColor: {
         'mainbg' : '#44422d',

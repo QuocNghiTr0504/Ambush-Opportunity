@@ -71,7 +71,7 @@ const Management = () => {
               )}
               <button
                 onClick={handleReadMore}
-                className='mt-3 text-maintext text-lg'
+                className='mt-3 text-maintext text-lg '
               >
                 {isReadMore ? t('ButLessAtMana') : t('ButMoreAtMana')}
               </button>

@@ -4,8 +4,11 @@ import Link from "next/link"
 import logo from '@/public/assets/images/footer_logo.png';
 import { SystemColor } from "@/constants/Color";
 
+import { useTranslation } from 'react-i18next';
+
 
 export default function WebFooter() {
+const { t } = useTranslation();
     return (
         <Footer style={{ backgroundColor: SystemColor.footerBackground }} className='px-6 '>
             <main className="w-full">
@@ -18,53 +21,51 @@ export default function WebFooter() {
                                     src={logo}
                                     alt="Logo"
                                 />
-                                {/* <span className="uppercase font-bold text-2xl text-white tracking-widest">Ambush Opportunity</span>         */}
                             </div>
                         </div>
                         
                     
                         <div className="lg:mx-auto text-left ">
-                            <h4 className="text-xl text-maintext font-bold uppercase mb-7 tracking-wider">Instruments</h4>
+                            <h4 className="text-xl text-maintext font-bold uppercase mb-7 tracking-wider">{t('InstrumentsAtFooter')}</h4>
                             <ul className="text-lg  transition-all duration-500 text-white">
-                                <li className="mb-6"><a className="hover:text-maintext">Forex</a></li>
-                                <li className="mb-6"><a className="hover:text-maintext">Indices</a></li>
-                                <li className="mb-6"><a className="hover:text-maintext">Precious Metals</a></li>
-                                <li className="mb-6"><a className="hover:text-maintext">Energy</a></li>
-                                <li><a className="hover:text-maintext">Cryptocurrency</a></li>
+                                <li className="mb-6"><a className="hover:text-maintext">{t('InstrumentLink1sAtFooter')}</a></li>
+                                <li className="mb-6"><a className="hover:text-maintext">{t('InstrumentLink2sAtFooter')}</a></li>
+                                <li className="mb-6"><a className="hover:text-maintext">{t('InstrumentLink3sAtFooter')}</a></li>
+                                <li className="mb-6"><a className="hover:text-maintext">{t('InstrumentLink4sAtFooter')}</a></li>
+                                <li><a className="hover:text-maintext">{t('InstrumentLink5sAtFooter')}</a></li>
                             </ul>
                         </div>
                     
                         <div className="lg:mx-auto text-left ">
-                            <h4 className="text-xl text-maintext font-bold uppercase mb-7 tracking-wider">Account</h4>
+                            <h4 className="text-xl text-maintext font-bold uppercase mb-7 tracking-wider">{t('AccountAtFooter')}</h4>
                             <ul className="text-lg  transition-all duration-500 text-white">
-                                <li className="mb-6"><a className="hover:text-maintext">Type of Account</a></li>
-                                <li><a className="hover:text-maintext">Contract details
-                                </a></li>
+                                <li className="mb-6"><a className="hover:text-maintext">{t('AccountLink1AtFooter')}</a></li>
+                                <li><a className="hover:text-maintext">{t('AccountLink2AtFooter')}</a></li>
                             </ul>
                         </div>
                     
                         <div className="lg:mx-auto text-left">
-                            <h4 className="text-xl text-maintext font-bold uppercase mb-7 tracking-wider">The Company</h4>
+                            <h4 className="text-xl text-maintext font-bold uppercase mb-7 tracking-wider">{t('TheCompanyAtFooter')}</h4>
                             <ul className="text-lg  transition-all duration-500 text-white">
-                                <li className="mb-6"><a className="hover:text-maintext">Why Choose Us</a></li>
-                                <li className="mb-6"><a className="hover:text-maintext">Help Center</a></li>
-                                <li className="mb-6"><a className="hover:text-maintext">Latest Announcements</a></li>
-                                <li><a className="hover:text-maintext">Market Trend</a></li>
+                                <li className="mb-6"><a className="hover:text-maintext">{t('TheCompanyLink1AtFooter')}</a></li>
+                                <li className="mb-6"><a className="hover:text-maintext">{t('TheCompanyLink2AtFooter')}</a></li>
+                                <li className="mb-6"><a className="hover:text-maintext">{t('TheCompanyLink3AtFooter')}</a></li>
+                                <li><a className="hover:text-maintext">{t('TheCompanyLink4AtFooter')}</a></li>
                             </ul>
                         </div>
                     
                         <div className="lg:mx-auto text-left">
-                            <h4 className="text-xl text-maintext font-bold uppercase mb-7 tracking-wider">Registration</h4>
+                            <h4 className="text-xl text-maintext font-bold uppercase mb-7 tracking-wider">{t('RegistrationAtFooter')}</h4>
                             <ul className="text-lg transition-all duration-500 text-white">
-                                <li className="mb-6"><a className="hover:text-maintext">Open a Real Account</a></li>
-                                <li><a className="hover:text-maintext">Experience Simulation Trading</a></li>
+                                <li className="mb-6"><a className="hover:text-maintext">{t('RegistrationLink1AtFooter')}</a></li>
+                                <li><a className="hover:text-maintext">{t('RegistrationLink2AtFooter')}</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div className="py-7 border-t border-gray-200">
                         <div className="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-                            <span className="text-lg text-white">©<a  className="text-maintext font-medium">PT - Fintech</a> 2024, All rights reserved.</span>
+                            <span className="text-lg text-white">©<a  className="text-maintext font-medium">Smartfinance</a> 2024, All rights reserved.</span>
                             <div className="flex mt-4 space-x-4 sm:justify-center lg:mt-0">
                                 <a className= "w-9 h-9 rounded-full flex justify-center items-center hover:bg-maintext">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -88,8 +89,7 @@ export default function WebFooter() {
                                 <a className="w-9 h-9 rounded-full flex justify-center items-center hover:bg-maintext">
                                     <svg className="w-[1.25rem] h-[0.875rem] text-white" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9346 1.13529C14.5684 1.30645 15.0665 1.80588 15.2349 2.43896C15.5413 3.58788 15.5413 5.98654 15.5413 5.98654C15.5413 5.98654 15.5413 8.3852 15.2349 9.53412C15.0642 10.1695 14.5661 10.669 13.9346 10.8378C12.7886 11.1449 8.19058 11.1449 8.19058 11.1449C8.19058 11.1449 3.59491 11.1449 2.44657 10.8378C1.81277 10.6666 1.31461 10.1672 1.14622 9.53412C0.839844 8.3852 0.839844 5.98654 0.839844 5.98654C0.839844 5.98654 0.839844 3.58788 1.14622 2.43896C1.31695 1.80353 1.81511 1.30411 2.44657 1.13529C3.59491 0.828125 8.19058 0.828125 8.19058 0.828125C8.19058 0.828125 12.7886 0.828125 13.9346 1.13529ZM10.541 5.98654L6.72178 8.19762V3.77545L10.541 5.98654Z" fill="currentColor"/>
-                                    </svg>
-                                        
+                                    </svg>      
                                 </a>
                             </div>
                         </div>

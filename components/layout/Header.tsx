@@ -14,6 +14,9 @@ import { breakpoints } from "@/constants/Breakpoint";
 import NavMenu from "../drawers/NavMenu";
 import { usePathname } from "next/navigation";
 import { SystemColor as SystemColor } from "@/constants/Color";
+
+import { useTranslation } from 'react-i18next';
+
 export default function 
 NavHeader() {
     const { isAuthenticated, userInfo } = useSelector((state: RootState) => state.auth)
@@ -65,6 +68,8 @@ NavHeader() {
         )
     }
 
+    const { t } = useTranslation();
+
     const renderNavigationLink = () => {
         return (
             <header>
@@ -75,7 +80,7 @@ NavHeader() {
                             prefetch
                              className='text-xl relative group inline-block'
                         >
-                            About
+                           {t('AboutAtHeader')}
                             <span className="absolute left-0 bottom-0 h-1 w-full bg-maintext scale-x-0 group-hover:scale-x-100 transition-transform duration-300 translate-y-2"></span>
                         </Link>
                     </li>
@@ -85,7 +90,8 @@ NavHeader() {
                             href='/contact'
                             className='text-xl relative group inline-block'
                         >
-                            Contact
+                            {t('ContactAtHeader')}
+
                             <span className="absolute left-0 bottom-0 h-1 w-full bg-maintext scale-x-0 group-hover:scale-x-100 transition-transform duration-300 translate-y-2"></span>
                         </Link>
                     </li>
@@ -95,7 +101,7 @@ NavHeader() {
                             href='/contact'
                             className='text-xl relative group inline-block'
                         >
-                            Price
+                            {t('PriceAtHeader')}
                             <span className="absolute left-0 bottom-0 h-1 w-full bg-maintext scale-x-0 group-hover:scale-x-100 transition-transform duration-300 translate-y-2"></span>
                         </Link>
                     </li>
@@ -105,7 +111,7 @@ NavHeader() {
                             href='/contact'
                             className='text-xl relative group inline-block'
                         >
-                            Why us?
+                            {t('WhyusAtHeader')}
                             <span className="absolute left-0 bottom-0 h-1 w-full bg-maintext scale-x-0 group-hover:scale-x-100 transition-transform duration-500 translate-y-2"></span>
                         </Link>
                     </li>
@@ -125,7 +131,7 @@ NavHeader() {
                         prefetch
                         className='text-xl bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext border border-transparent rounded-lg p-2 shadow-md hover:shadow-lg transition-shadow duration-300'
                     >
-                        Sign in
+                            {t('LogInAtHeader')}
                     </Link> 
                 </li>
                 <li>
@@ -134,7 +140,7 @@ NavHeader() {
                         href='/register'
                         className='text-xl bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext border border-transparent rounded-lg p-2 shadow-md hover:shadow-lg transition-shadow duration-300'
                     >
-                        Sign up
+                            {t('RegisterAtHeader')}
                     </Link>
                 </li>
             </ul>

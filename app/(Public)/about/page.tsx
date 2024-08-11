@@ -80,7 +80,7 @@ export default function AboutPage() {
       </div>
 
       <div className='text-center mb-12 '>
-        <Button>
+        <Button className='bg-gradient-to-r text-white from-extratext to-maintext'>
           <Link href='/register' className='uppercase font-bold text-xl px-4'>{t('ButBigAtAboutPage')}</Link>
         </Button>
       </div>

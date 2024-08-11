@@ -38,7 +38,7 @@ const Investing = () => {
                   </p>
                 </Reveal>
                 <div className='my-10 flex justify-center items-center'>
-                  <Button className='uppercase font-bold text-lg'>
+                  <Button className='uppercase font-bold text-lg text-white bg-mainbg hover:shadow-mainbg'>
                     {t('ButAtInvesting')}
                   </Button>
                 </div>

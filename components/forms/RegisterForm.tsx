@@ -10,6 +10,8 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import CountrySelect from "../commons/CountrySelect";
 
+import { useTranslation } from "react-i18next";
+
 export const RegisterForm = () => {
     const { register, handleSubmit, setValue, setError, formState: { errors } } = useForm<IRegisterInfo>();
 
@@ -33,10 +35,13 @@ export const RegisterForm = () => {
         }
     };
     // Implement logic to handle country selection (e.g., set selectedCountry state)
+
+    const { t } = useTranslation();
+
     return (
         <div className="flex items-center justify-center w-96">
             <div className="w-full max-w-2xl p-8 space-y-3 bg-white rounded-lg shadow-2xl">
-                <h1 className="text-2xl font-bold text-center">Sign up</h1>
+                <h1 className="text-2xl font-bold text-center">{t('TitAtSignUp')}</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                     <div>
                         <CountrySelect countryCode="countryCode" setValue={setValue} />
@@ -54,7 +59,7 @@ export const RegisterForm = () => {
                         <input
                             type="text"
                             id="username"
-                            placeholder="Username"
+                            placeholder={t('FormatUserSign')}
                             {...register('username', { required: 'Username is required' })}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             required
@@ -64,7 +69,7 @@ export const RegisterForm = () => {
                     <div className=" text-sm">
                         <input
                             type="text"
-                            placeholder="Email"
+                            placeholder={t('PlaceMail')}
                             id="email"
                             {...register('email', { required: 'Email is required' })}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
@@ -75,7 +80,7 @@ export const RegisterForm = () => {
                     <div className=" text-sm">
                         <input
                             type="password"
-                            placeholder="Password"
+                            placeholder={t('FormatPassSign')}
                             id="password"
                             {...register('password', { required: 'Password is required' })}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
@@ -91,7 +96,7 @@ export const RegisterForm = () => {
                             {...register('phoneNumber', { required: 'Phone is required' })}
                             className="w-full px-4 py-2 h-full border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             required
-                            placeholder="0 121 777 511"
+                            placeholder={t('PlacePhoneNum')}
                         />
 
                         <input
@@ -100,7 +105,7 @@ export const RegisterForm = () => {
                             {...register('countryCallingCode', { required: 'countryCallingCode is required' })}
                             className="w-full hidden px-4 py-2 h-full border rounded-md focus:outline-none focus:ring-2 focus:ring-maintext"
                             required
-                            placeholder="0 121 777 511"
+                            placeholder={t('PlaceCallCounCode')}
                         />
                         {errors.phoneNumber && <p className="text-red-500 text-sm">{errors.phoneNumber.message}</p>}
                         {errors.countryCallingCode && <p className="text-red-500 text-sm">{errors.countryCallingCode.message}</p>}
@@ -109,16 +114,16 @@ export const RegisterForm = () => {
 
                     <button
                         type="submit"
-                        className="block w-full p-3 text-center text-white rounded-md bg-gradient-to-r from-extratext to-maintext hover:text-black hover:opacity-90 hover:shadow-maintext hover:shadow-xl transition-shadow duration-300"
+                        className="block w-full p-3 text-center text-white rounded-md bg-mainbg hover:text-black hover:opacity-90 hover:shadow-mainbg hover:shadow-xl transition-colors duration-500 ease-in-out"
                     >
-                        Sign up
+                        {t('But1SignUp')}
                     </button>
                 </form>
                 <div className="text-center mt-4">
                     <p className="text-sm text-gray-600">
-                        Already have an account?{' '}
-                        <Link href="/login" className="text-extratext hover:text-maintext hover:shadow-maintext">
-                            Login here
+                        {t('QuestionSigUp')}{' '}
+                        <Link href="/login" className="text-mainbg hover:opacity-85">
+                            {t('But2SignUp')}
                         </Link>
                     </p>
                 </div>

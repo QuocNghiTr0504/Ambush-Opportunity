@@ -51,7 +51,7 @@ export default function AboutPage() {
       </div>
 
       <div className='container text-black mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 my-20 shadow-xl'>
-        <div className='px-8 py-6 bg-white rounded-lg shadow-lg'>
+        <div className='px-8 py-6 bg-white rounded-lg shadow-lg '>
           <div className='flex gap-6'>
             <HeatMapOutlined style={{color:'#ecc012', fontSize: '34px', textShadow: '2px 2px 4px rgba(0, 0, 0, 0.3)' }}  />
             <p className='font-bold text-2xl my-4'>{t('TitBor1AtAboutPage')}</p>
@@ -80,7 +80,7 @@ export default function AboutPage() {
       </div>
 
       <div className='text-center mb-12 '>
-        <Button>
+        <Button className='bg-gradient-to-r text-white from-extratext to-maintext'>
           <Link href='/register' className='uppercase font-bold text-xl px-4'>{t('ButBigAtAboutPage')}</Link>
         </Button>
       </div>

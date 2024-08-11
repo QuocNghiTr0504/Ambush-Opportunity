@@ -36,9 +36,9 @@ export const GeneralInformation = () => {
           </div>
           <div className='flex flex-col lg:col-span-3 lg:relative lg:top-[-30px] lg:right-[-30px] '>
             <Image alt='' className='object-cover w-auto' src={Background}></Image>
-            <div className='w-full flex items-center justify-center mt-10 '>
+            <div className='w-full flex items-center justify-center mt-10'>
               <Reveal>
-                <Button>{t('ButtonAtGen')}</Button>
+                <Button className='text-white bg-mainbg hover:shadow-mainbg '>{t('ButtonAtGen')}</Button>
               </Reveal>
 
             </div>

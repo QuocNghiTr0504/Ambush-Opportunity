@@ -1,16 +1,19 @@
 import { IContactInfo } from "@/interfaces/IContactInfo";
 import { useForm } from "react-hook-form";
 
+import { useTranslation } from 'react-i18next';
+
+
 export const ContactForm = () => {
   const { register, handleSubmit, formState: { errors } } = useForm<IContactInfo>();
   const onSubmit = (data: IContactInfo) => {
     console.log(data);
   };
-
+  const { t } = useTranslation();
   return (
     <div className="flex items-center justify-center w-full max-w-2xl mx-auto">
       <div className="w-full p-8 space-y-6 bg-white rounded-lg shadow-2xl mt-10">
-        <h1 className="text-3xl font-bold text-center">Contact Us</h1>
+        <h1 className="text-3xl font-bold text-center">{t('AboutAtHeader')}</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
           <div className="relative">
             <input
@@ -24,7 +27,7 @@ export const ContactForm = () => {
               htmlFor="firstname"
               className="absolute top-0 left-4 text-gray-600 transition-transform duration-300 transform -translate-y-1/2 scale-85 origin-left peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-focus:z-10 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-maintext"
             >
-              First Name
+              {t('NameCtForm')}
             </label>
             {errors.name && (
               <p className="text-red-500 text-base mt-1">{errors.name.message}</p>
@@ -43,7 +46,7 @@ export const ContactForm = () => {
               htmlFor="email"
               className="absolute top-0 left-4 text-gray-600 transition-transform duration-300 transform -translate-y-1/2 scale-85 origin-left peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-maintext"
             >
-              Email
+              {t('MailCtForm')}
             </label>
             {errors.email && (
               <p className="text-red-500 text-base mt-1">{errors.email.message}</p>
@@ -62,7 +65,7 @@ export const ContactForm = () => {
               htmlFor="message"
               className="absolute top-0 left-4 text-gray-600 transition-transform duration-300 transform -translate-y-1/2 scale-85 origin-left peer-placeholder-shown:top-1/2 peer-placeholder-shown:left-4 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-maintext"
             >
-              Your Message
+              {t('MessCtForm')}
             </label>
             {errors.message && (
               <p className="text-red-500 text-base mt-1">{errors.message.message}</p>
@@ -71,9 +74,9 @@ export const ContactForm = () => {
 
           <button
             type="submit"
-            className="uppercase font-bold block w-full py-4 text-center text-white bg-maintext rounded-md hover:bg-extratext"
+            className="uppercase font-bold block w-full py-4 text-center bg-mainbg text-white hover:text-black hover:shadow-xl hover:shadow-mainbg transition-colors duration-500 ease-in-out"
           >
-            Send Message
+            {t('ButCtForm')}
           </button>
         </form>
       </div>
