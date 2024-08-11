@@ -29,34 +29,6 @@ export const GeneralInformation = () => {
   };
 
   const { t } = useTranslation();
-<<<<<<< HEAD
-  return (
-    <section className='w-full relative top-[-50px] z-10 mx-auto' >
-      <motion.div variants={staggerVariants} whileInView="in" initial="initial" exit="out" className='bg-gray-50 shadow-2xl container rounded-lg p-20  mx-auto'>
-        <Title className='tracking-wider ml-12'>{t('TitleAtGenerall')}</Title>
-        <div className='grid justify-items-center grid-cols-1 lg:grid-cols-7'>
-          <div className='lg:col-span-4'>
-            <Reveal>
-              <p className='text-lg  mb-6'>{t('TextBoldAtGenerall')}</p>
-            </Reveal>
-            <Reveal>
-              <p className='text-lg mb-6'>{t('TextStartAtGen')}</p>
-            </Reveal>
-            <Reveal>
-              <p className='text-lg mb-6'>{t('TextMidAtGen')}</p>
-            </Reveal>
-            <Reveal>
-              <p className='text-lg mb-6'>{t('TextEndAtGen')}</p>
-            </Reveal>
-          </div>
-          <div className='flex flex-col lg:col-span-3 lg:relative lg:top-[-30px] lg:right-[-30px] '>
-            <Image alt='' className='object-cover w-auto' src={Background}></Image>
-            <div className='w-full flex items-center justify-center mt-10'>
-              <Reveal>
-                <Button className='text-white bg-mainbg hover:shadow-mainbg '>{t('ButtonAtGen')}</Button>
-              </Reveal>
-=======
->>>>>>> 693da6102d9b227b0d1364590a2005c74288b1cc
 
   // Hàm để xử lý khi nhấn nút
   const handleButtonClick = () => {
@@ -101,7 +73,7 @@ export const GeneralInformation = () => {
             ></Image>
             <div className="w-full flex items-center justify-center mt-10 ">
               <Reveal>
-                <Button className="uppercase" onClick={handleButtonClick}>
+                <Button className="uppercase text-white bg-mainbg hover:shadow-mainbg" onClick={handleButtonClick}>
                   {t(showMore ? "Button2AtGen" : "ButtonAtGen")}
                 </Button>
               </Reveal>

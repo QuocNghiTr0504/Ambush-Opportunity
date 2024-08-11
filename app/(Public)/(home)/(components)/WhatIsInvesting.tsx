@@ -1,6 +1,6 @@
 "use client"
 import React from 'react';
-import Background from '@/public/assets/images/home/What_is_Investing.jpg'; // Adjust the path to your image file
+import Background from '@/public/assets/images/home/What_is_Investing.jpg'; 
 import { Title } from '@/components/commons/Title';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';

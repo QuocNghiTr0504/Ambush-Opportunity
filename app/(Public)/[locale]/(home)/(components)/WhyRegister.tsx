@@ -36,7 +36,7 @@ export const WhyRegister = () => {
                                 </p>
                             </Reveal>
                             <div className='w-full flex justify-center items-center text-white'>
-                                <Button onClick={() => router.push('/register')}>Register now</Button>
+                                <Button className='bg-gradient-to-r text-white from-extratext to-maintext' onClick={() => router.push('/register')}>Register now</Button>
                             </div>
                         </div>
                         <div className="col-span-2 hidden lg:block">

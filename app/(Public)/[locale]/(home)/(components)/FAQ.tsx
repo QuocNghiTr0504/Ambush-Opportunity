@@ -56,7 +56,7 @@ const FAQ = () => {
     </div>
     <div className='text-center mt-20'>
       <Link href='register'>
-        <Button className='text-lg uppercase px-5 py-3'>
+        <Button className='text-lg uppercase px-5 py-3 text-white bg-mainbg hover:shadow-mainbg'>
           {t('ButtonAtFAQ')}
         </Button>
       </Link>

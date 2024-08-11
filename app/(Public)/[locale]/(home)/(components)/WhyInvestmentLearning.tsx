@@ -1,13 +1,7 @@
 "use client"
 import React from 'react';
-import Background from '@/public/assets/images/half-4.webp'; // Adjust the path to your image file
 import { Title } from '@/components/commons/Title';
-import Icon1 from '@/public/assets/images/icon-1.png';
-import Icon2 from '@/public/assets/images/icon-2.png';
-import Icon3 from '@/public/assets/images/icon-3.png';
 import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
-
 import { BookOutlined } from '@ant-design/icons';
 import { ReadOutlined } from '@ant-design/icons'; 
 import { PieChartOutlined } from '@ant-design/icons';
