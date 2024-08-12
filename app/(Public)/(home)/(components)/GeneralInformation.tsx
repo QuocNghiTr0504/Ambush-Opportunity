@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import { staggerVariants } from "@/constants/StaggerVariant";
 import { Reveal } from "@/components/animations/Reveal";
 
-const MotionText = ({ children }) => (
+const MotionText  : React.FC<React.PropsWithChildren>= ({ children }) => (
   <motion.p
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
