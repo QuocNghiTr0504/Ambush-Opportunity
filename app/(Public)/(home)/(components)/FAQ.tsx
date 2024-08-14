@@ -5,6 +5,7 @@ import { DropdownCard } from '@/components/commons/CardDown';
 import { Button } from '@/components/commons/Button';
 import { useTranslation } from 'react-i18next';
 import Link from 'next/link';
+import { LocalizedLink } from '@/components/commons/LocalizedLink';
 
 const FAQ = () => {
   const { t } = useTranslation();
@@ -41,11 +42,11 @@ const FAQ = () => {
           </div>
         </div>
         <div className='text-center mt-20'>
-          <Link href='register'>
+          <LocalizedLink href='register'>
             <Button className='text-lg uppercase px-5'>
               {t('ButtonAtFAQ')}
             </Button>
-          </Link>
+          </LocalizedLink>
         </div>
       </div>
     </section>

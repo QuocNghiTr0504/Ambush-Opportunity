@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import { SystemColor } from '@/constants/Color';
 import Link from 'next/link';
+import { LocalizedLink } from '@/components/commons/LocalizedLink';
 
 export default function AboutPage() {
   const { t } = useTranslation();
@@ -87,7 +88,7 @@ export default function AboutPage() {
 
       <div className='text-center mb-12 '>
         <Button>
-          <Link href='/register' className='uppercase font-bold text-xl px-4'>{t('ButBigAtAboutPage')}</Link>
+          <LocalizedLink href='/register' className='uppercase font-bold text-xl px-4'>{t('ButBigAtAboutPage')}</LocalizedLink>
         </Button>
       </div>
     </div>

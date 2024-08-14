@@ -6,6 +6,7 @@ import { Button } from '@/components/commons/Button';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
 import { Reveal } from '@/components/animations/Reveal';
+import { LocalizedLink } from '@/components/commons/LocalizedLink';
 
 const Investing = () => {
   const { t } = useTranslation();
@@ -38,9 +39,11 @@ const Investing = () => {
                   </p>
                 </Reveal>
                 <div className='my-10 flex justify-center items-center'>
-                  <Button className='uppercase font-bold text-lg'>
-                    {t('ButAtInvesting')}
-                  </Button>
+                  <LocalizedLink href='/register'>
+                    <Button className='uppercase font-bold text-lg'>
+                      {t('ButAtInvesting')}
+                    </Button>
+                  </LocalizedLink>
                 </div>
               </div>
             </div>
