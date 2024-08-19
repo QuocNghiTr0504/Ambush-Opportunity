@@ -12,16 +12,14 @@ export const WhyInvestmentLearning = () => {
   const { t } = useTranslation();
   return (
     <section className='my-12'>
-      <div className='container bg-white p-8 mx-auto'>
+      <div className='container bg-white p-20 max-sm:p-8 mx-auto'>
         <div className='flex flex-col w-full items-center '>
           <Title barPosition='center'>{t('TitAtWhyInves')}</Title>
-          <div className='px-20'>
-
+          <div >
             <p className='my-4  text-lg'>{t('TextAtWhyInves')}</p>
           </div>
           <div className='my-8 w-full  grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  gap-8'>
             <div
-
               className='rounded-lg p-8 shadow-md'
             >
               <div className=' flex justify-center  py-4'>

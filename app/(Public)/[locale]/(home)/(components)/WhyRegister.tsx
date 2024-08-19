@@ -15,7 +15,7 @@ export const WhyRegister = () => {
     return (
         <section className='relative min-h-[900px]'>
             <div className='container  mx-auto'>
-                <div className='max-w-screen-xl relative z-10 rounded-xl shadow-xl  bg-white p-20'>
+                <div className='max-w-screen-xl relative z-10 rounded-xl shadow-xl  bg-white p-20 max-sm:p-8'>
 
                     <div className="flex items-center space-x-2">
                         <Reveal>

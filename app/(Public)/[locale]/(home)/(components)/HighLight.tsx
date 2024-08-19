@@ -9,7 +9,7 @@ const Highlight = () => {
 
   return (
     <div
-      className='flex justify-center p-20 bg-cover bg-center w-full'
+      className='flex justify-center p-20 max-sm:p-8 bg-cover bg-center w-full'
       style={{ backgroundImage: `url(${Background})` }}
     >
       <div>

@@ -13,7 +13,7 @@ const Investing = () => {
 
   return (
     <section className='w-full'>
-      <div className='container p-20 bg-white mx-auto '>
+      <div className='container p-20 max-sm:p-8 bg-white mx-auto '>
         <div className='grid grid-cols-1 md:grid-cols-5 gap-x-4 mb-5'>
           <div className='md:col-span-3'>
             <div className='h-full flex items-center justify-center'>
@@ -49,7 +49,7 @@ const Investing = () => {
             </div>
           </div>
           <div className='md:col-span-2'>
-            <div className='h-full flex relative  md:top-[-35px] right-[50px] z-[0] items-center justify-center w-full'>
+            <div className='h-full flex relative  md:top-[-35px]  z-[0] items-center justify-center w-full'>
               <Image
                 src={DolassImg}
                 alt=''

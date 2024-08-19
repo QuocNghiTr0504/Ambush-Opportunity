@@ -10,7 +10,7 @@ const Conclusion = () => {
 
   return (
     <section className='w-full my-20'>
-      <div className='container p-20 bg-white mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-5'>
+      <div className='container p-20 max-sm:p-8 bg-white mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-5'>
         <div className='md:col-span-2'>
           <div className='h-full flex items-center justify-center'>
             <div className='w-full'>
@@ -39,12 +39,12 @@ const Conclusion = () => {
           </div>
         </div>
         <div className='col-span-1'>
-          <div className='h-full flex relative top-[-0px] right-[20px] z-[0] items-center justify-center w-full'>
+          <div className='h-full flex relative top-[-0px] z-[0] items-center justify-center w-full'>
             <Reveal>
               <Image
                 src={ManConc}
                 alt=''
-                className='w-[85%] h-auto'
+                className=' h-auto'
               />
             </Reveal>
           </div>

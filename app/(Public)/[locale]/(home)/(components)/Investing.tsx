@@ -12,7 +12,7 @@ const Investing = () => {
 
   return (
     <section className='w-full'>
-      <div className='container p-20 bg-white mx-auto '>
+      <div className='container p-20 max-sm:p-8 bg-white mx-auto '>
         <div className='grid grid-cols-5 gap-x-4 mb-5'>
           <div className='col-span-3'>
             <div className='h-full flex items-center justify-center'>

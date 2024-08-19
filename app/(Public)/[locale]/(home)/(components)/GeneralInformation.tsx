@@ -17,7 +17,7 @@ export const GeneralInformation = () => {
   const { t } = useTranslation();
   return (
     <section className='w-full relative top-[-50px] z-10' >
-      <motion.div variants={staggerVariants} whileInView="in" initial="initial" exit="out" className='bg-white shadow-xl  container rounded-lg p-20  mx-auto'>
+      <motion.div variants={staggerVariants} whileInView="in" initial="initial" exit="out" className='bg-white shadow-xl  container rounded-lg p-20 max-sm:p-8 mx-auto'>
         <Title>{t('TitleAtGenerall')}</Title>
         <div className='grid  justify-items-center grid-cols-1 lg:grid-cols-7'>
           <div className='lg:col-span-4'>

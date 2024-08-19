@@ -10,7 +10,7 @@ export const WhatIsInvesting = () => {
     const { t } = useTranslation();
     return (
         <section >
-            <div className='container bg-white p-20 mx-auto'>
+            <div className='container bg-white p-20 max-sm:p-8 mx-auto'>
 
                 <div className="grid grid-cols-1 md:grid-cols-6 gap-8 items-start">
                     <div className="col-span-2 relative  lg:top-24">

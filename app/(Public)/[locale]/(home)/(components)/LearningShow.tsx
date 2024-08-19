@@ -10,7 +10,7 @@ const LearningShow = () => {
 
   return (
     <section>
-      <div className='container bg-white p-20 mx-auto'>
+      <div className='container bg-white p-20 max-sm:p-8 mx-auto'>
         <div className='flex flex-col items-center'>
           <div className='my-12'>
             <Title barPosition='center'>

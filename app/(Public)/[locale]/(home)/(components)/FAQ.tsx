@@ -12,7 +12,7 @@ const FAQ = () => {
 
   return (
     <section>
-      <div className='container p-20 bg-white mx-auto'>
+      <div className='container p-20 max-sm:p-8 bg-white mx-auto'>
         <div>
           <div className='mb-10'>
             <Title barPosition='center'>

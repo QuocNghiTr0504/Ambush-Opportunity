@@ -12,7 +12,7 @@ const EducationFirm = () => {
   const { t } = useTranslation();
   return (
     <section className='w-full'>
-      <div className='container p-20 bg-white mx-auto grid grid-cols-3 gap-4 mb-5'>
+      <div className='container p-20 max-sm:p-8 bg-white mx-auto grid grid-cols-3 gap-4 mb-5'>
         <div className='col-span-2'>
           <div className='h-full flex items-center justify-center'>
             <div className='w-full'>
