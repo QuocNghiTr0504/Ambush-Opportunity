@@ -80,8 +80,8 @@ export default function NavHeader() {
 
   const renderNavigationLink = () => {
     return (
-      <header>
-        <ul style={{ color: SystemColor.navLink }} className={`flex gap-16`}>
+      <header className="mr-auto ml-10">
+        <ul style={{ color: SystemColor.navLink }} className={`flex gap-10`}>
           <li>
             <LocalizedLink href="/about" className=" text-lg">
               About
@@ -90,16 +90,6 @@ export default function NavHeader() {
           <li>
             <LocalizedLink href="/contact" className=" text-lg">
               Contact
-            </LocalizedLink>
-          </li>
-          <li>
-            <LocalizedLink href="/contact" className=" text-lg">
-              Price
-            </LocalizedLink>
-          </li>
-          <li>
-            <LocalizedLink href="/contact" className=" text-lg">
-              Why us?
             </LocalizedLink>
           </li>
         </ul>
@@ -125,7 +115,7 @@ export default function NavHeader() {
   return (
     <header style={headerStyle}>
       <div className="container mx-auto h-[100px] w-full">
-        <div className="h-full flex flex-wrap items-center align-middle justify-between">
+        <div className="h-full flex flex-wrap items-center align-middle">
           <LocalizedLink href="/">
             <Image
               className="max-h-[70px] w-auto object-cover"

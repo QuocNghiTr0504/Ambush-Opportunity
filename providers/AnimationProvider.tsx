@@ -13,7 +13,7 @@ export default function AnimatedPage({ children }: { children: React.ReactNode }
             animate="in"
             exit="out"
             variants={PAGE_VARIANTS}
-            style={{ position: 'relative', minWidth: '100vw', minHeight: '100vh', overflow: 'hidden' }}
+            style={{ position: 'relative', minHeight: '100vh', overflow: 'hidden' }}
 
         >
             {children}
