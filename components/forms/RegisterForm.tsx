@@ -24,17 +24,17 @@ export const RegisterForm = () => {
   const dispatch = useDispatch<AppDispatch>();
 
   const onSubmit = async (registerInfo: IRegisterInfo) => {
-    let phoneIsValid = validatePhoneNumber(
-      registerInfo.countryCallingCode,
-      registerInfo.phoneNumber
-    );
-    if (!phoneIsValid) {
-      setError("phoneNumber", {
-        type: "validate",
-        message: "Phone number is invalid",
-      });
-      return;
-    }
+    // let phoneIsValid = validatePhoneNumber(
+    //   registerInfo.countryCallingCode,
+    //   registerInfo.phoneNumber
+    // );
+    // if (!phoneIsValid) {
+    //   setError("phoneNumber", {
+    //     type: "validate",
+    //     message: "Phone number is invalid",
+    //   });
+    //   return;
+    // }
     const result = await dispatch(registerThunk({ registerInfo }));
     if (result.meta.requestStatus === "fulfilled") {
       router.push("/confirm-email");
