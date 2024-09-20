@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { useForm } from "react-hook-form"
 import { useDispatch, useSelector } from "react-redux";
 import { LocalizedLink } from "../commons/LocalizedLink";
+import { useTranslation } from "react-i18next";
 
 
 export const LoginForm = () => {
@@ -23,17 +24,19 @@ export const LoginForm = () => {
             router.push('/');
         }
     }, [isAuthenticated, router])
+
+    const { t } = useTranslation();
     return (
 
         <div className="flex items-center justify-center w-96">
             <div className="w-full flex flex-col h-86 px-8 py-6 space-y-3 bg-white rounded-lg shadow-md">
-                <h1 className="text-2xl font-bold text-center">Login</h1>
+                <h1 className="text-2xl font-bold text-center">{t('TitLog')}</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 flex-1 py-4">
                     <div className="text-sm ">
                         <input
                             type="text"
                             id="firstname"
-                            placeholder="Username"
+                            placeholder={t('PlaceUserLogin')}
                             {...register('email', { required: 'Username is required' })}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
                             required
@@ -43,7 +46,7 @@ export const LoginForm = () => {
                     <div className="text-sm">
                         <input
                             type="password"
-                            placeholder="Password"
+                            placeholder={t('PlacePassLogin')}
                             id="password"
                             {...register('password', { required: 'Password is required' })}
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
@@ -56,15 +59,15 @@ export const LoginForm = () => {
                         type="submit"
                         className="block w-full p-3 text-center text-white bg-indigo-500 rounded-md hover:bg-indigo-600"
                     >
-                        Sign in
+                        {t('ButLogIn')}
                     </button>
 
                 </form>
                 <div className="text-center">
                     <p className="mt-2 text-sm text-gray-600">
-                        Don&apos;t have an account?{' '}
+                        {t('QuestionLog')}
                         <LocalizedLink href="/register" className="text-indigo-500 hover:text-indigo-600">
-                            Register here
+                        {t('But2LogIn')}
                         </LocalizedLink>
                     </p>
                 </div>
