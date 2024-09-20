@@ -15,6 +15,7 @@ import NavMenu from "../drawers/NavMenu";
 import { usePathname } from "next/navigation";
 import { SystemColor as SystemColor } from "@/constants/Color";
 import { LocalizedLink } from "../commons/LocalizedLink";
+import { useTranslation } from "react-i18next";
 export default function NavHeader() {
   const { isAuthenticated, userInfo } = useSelector(
     (state: RootState) => state.auth
@@ -77,19 +78,19 @@ export default function NavHeader() {
       </div>
     );
   };
-
+  const { t } = useTranslation();
   const renderNavigationLink = () => {
     return (
       <header className="mr-auto ml-10">
         <ul style={{ color: SystemColor.navLink }} className={`flex gap-10`}>
           <li>
             <LocalizedLink href="/about" className=" text-lg">
-              About
+              {t("AboutAtHeader")}
             </LocalizedLink>
           </li>
           <li>
             <LocalizedLink href="/contact" className=" text-lg">
-              Contact
+              {t("ContactAtHeader")}
             </LocalizedLink>
           </li>
         </ul>
@@ -101,12 +102,12 @@ export default function NavHeader() {
       <ul style={{ color: SystemColor.navLink }} className={`flex  space-x-4`}>
         <li>
           <LocalizedLink href="/login" className=" text-lg">
-            Sign in
+            {t("SigninHeader")}
           </LocalizedLink>
         </li>
         <li>
           <LocalizedLink href="/register" className=" text-lg">
-            Sign up
+           {t("SignupAtHeader")}
           </LocalizedLink>
         </li>
       </ul>

@@ -10,6 +10,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import CountrySelect from "../commons/CountrySelect";
 import { LocalizedLink } from "../commons/LocalizedLink";
+import { useTranslation } from "react-i18next";
 
 export const RegisterForm = () => {
   const {
@@ -41,10 +42,12 @@ export const RegisterForm = () => {
     }
   };
   // Implement logic to handle country selection (e.g., set selectedCountry state)
+
+  const { t } = useTranslation();
   return (
     <div className="flex items-center justify-center w-96">
       <div className="w-full max-w-md p-8 space-y-3 bg-white rounded-lg shadow-md">
-        <h1 className="text-2xl font-bold text-center">Sign up</h1>
+        <h1 className="text-2xl font-bold text-center">{t('TitAtSignUp')}</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
           <div>
             <CountrySelect countryCode="countryCode" setValue={setValue} />
@@ -67,7 +70,7 @@ export const RegisterForm = () => {
             <input
               type="text"
               id="username"
-              placeholder="Username"
+              placeholder={t('FormatUserSign')}
               {...register("username", { required: "Username is required" })}
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
               required
@@ -79,7 +82,7 @@ export const RegisterForm = () => {
           <div className=" text-sm">
             <input
               type="text"
-              placeholder="Email"
+              placeholder={t('PlaceMail')}
               id="email"
               {...register("email", { required: "Email is required" })}
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
@@ -92,7 +95,7 @@ export const RegisterForm = () => {
           <div className=" text-sm">
             <input
               type="password"
-              placeholder="Password"
+              placeholder={t('FormatPassSign')}
               id="password"
               {...register("password", { required: "Password is required" })}
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
@@ -127,17 +130,17 @@ export const RegisterForm = () => {
             type="submit"
             className="block w-full p-3 text-center text-white bg-indigo-500 rounded-md hover:bg-indigo-600"
           >
-            Sign up
+            {t('But1SignUp')}
           </button>
         </form>
         <div className="text-center mt-4">
           <p className="text-sm text-gray-600">
-            Already have an account?{" "}
+            {t('QuestionSigUp')}
             <LocalizedLink
               href="/login"
               className="text-indigo-500 hover:text-indigo-600"
             >
-              Login here
+              {t('But2SignUp')}
             </LocalizedLink>
           </p>
         </div>

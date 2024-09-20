@@ -4,8 +4,10 @@ import Link from "next/link";
 import logo from "@/public/assets/images/logo-head.png";
 import { SystemColor } from "@/constants/Color";
 import { LocalizedLink } from "../commons/LocalizedLink";
+import { useTranslation } from "react-i18next";
 
 export default function WebFooter() {
+  const { t } = useTranslation()
   return (
     <Footer
       style={{ backgroundColor: SystemColor.footerBackground }}
@@ -22,13 +24,13 @@ export default function WebFooter() {
             className="h-fit text-white whitespace-nowrap  text-xl"
             href="/"
           >
-            Terms
+            {t("TermsAtFooter")}
           </LocalizedLink>
           <LocalizedLink
-            className="h-fit  text-white whitespace-nowrap  text-xl"
+            className="h-fit text-white whitespace-nowrap text-xl"
             href="/"
           >
-            Privacy Policy
+            {t("PrivacyAtFooter")}
           </LocalizedLink>
         </div>
       </main>

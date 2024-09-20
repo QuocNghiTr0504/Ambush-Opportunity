@@ -22,7 +22,7 @@ export const ExploreForm = () => {
             <input
               type="text"
               id="firstname"
-              placeholder="First name"
+              placeholder={t("FirstNameSign")}
               {...register("firstname", { required: "firstname is required" })}
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
               required
@@ -36,7 +36,7 @@ export const ExploreForm = () => {
           <div className="space-y-1 text-sm">
             <input
               type="text"
-              placeholder="Last name"
+              placeholder={t("LastNameSign")}
               id="lastname"
               {...register("lastname", { required: "Last name is required" })}
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
@@ -49,7 +49,7 @@ export const ExploreForm = () => {
           <div className="space-y-1 text-sm">
             <input
               type="text"
-              placeholder="Email"
+              placeholder={t("EmailSign")}
               id="email"
               {...register("email", { required: "Email is required" })}
               className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-400"
@@ -78,12 +78,7 @@ export const ExploreForm = () => {
               })}
             />
             <p>
-              I agree to share my personal data (full name, email address and
-              phone number) with the partners of Ambush Opportunity for their
-              own purposes. Ambush Opportunity&apos;s partners are investment
-              education firms, data brokers and intermediaries. To find out more
-              about the processing of your personal data and your rights, please
-              consult our Data Privacy Notice.
+              {t("PriNoticeSign")}
             </p>
           </div>
 
@@ -91,7 +86,7 @@ export const ExploreForm = () => {
             type="submit"
             className="block w-full p-3 text-center text-white bg-indigo-500 rounded-md hover:bg-indigo-600"
           >
-            Learn more
+            {t("ButtonSign")}
           </button>
         </form>
       </div>
