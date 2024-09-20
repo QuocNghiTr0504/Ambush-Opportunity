@@ -3,5 +3,7 @@ export interface IRegisterInfo {
     email: string,
     password: string,
     countryCode: string,
+    countryCallingCode: number,
+    phoneNumber: string
 }
 

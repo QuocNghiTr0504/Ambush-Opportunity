@@ -8,12 +8,7 @@ export function middleware(req: NextRequest) {
     const { pathname } = req.nextUrl;
     const url = req.nextUrl.clone();
 
-
-
-    // If the pathname is not register or login, skip this middleware
-    if (pathname !== '/register' && pathname !== '/login') {
-        return NextResponse.next();
-    }
+    console.log(url)
 
     // Check for Authorization header
     const authHeader = req.headers.get('authorization');
@@ -29,5 +24,5 @@ export function middleware(req: NextRequest) {
 }
 
 export const config = {
-    matcher: ['/register', '/login', '/', '/about', '/contact'],
+    matcher: ['/register', '/login', '/', '/about', '/contact', '/confirm-email'],
 };
