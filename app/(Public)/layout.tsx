@@ -14,11 +14,7 @@ export default function PublicRouteLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
-    const dispatch = useDispatch<AppDispatch>();
-    useEffect(() => {
-        dispatch(fetchAuthTokenThunk());
 
-    }, [dispatch]);
 
     return (
 
