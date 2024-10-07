@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import CountryCodeSelect from "../commons/CountryCodeSelect";
 import { validatePhoneNumber } from "@/helpers/phoneNumberValidator";
-import { registerThunk } from "@/redux/slices/authSlice";
+import { fetchAuthTokenThunk, registerThunk } from "@/redux/slices/authSlice";
 import { AppDispatch } from "@/redux/store";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -23,8 +23,9 @@ export const RegisterForm = () => {
 
   const router = useRouter();
   const dispatch = useDispatch<AppDispatch>();
-
   const onSubmit = async (registerInfo: IRegisterInfo) => {
+    dispatch(fetchAuthTokenThunk());
+
     let phoneIsValid = validatePhoneNumber(
       registerInfo.countryCallingCode,
       registerInfo.phoneNumber
