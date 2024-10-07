@@ -18,13 +18,17 @@ const CountryCodeSelect: React.FC<CountryCodeSelectProps> = ({ countryCallingCod
     const [selected, setSelected] = useState(84);
     const fetchSupportedCountries = async () => {
         try {
+            // Sort follow coutryShortCode
             let response = await CountryAPI.getSupportedCountries();
             if (response.data) {
-                setCountries(response.data);
+                const sortedCountries = response.data.sort((a: ICountry, b: ICountry) => {
+                    return a.countryShortCode.localeCompare(b.countryShortCode, 'en', { sensitivity: 'base' });
+                });
+                setCountries(sortedCountries);
             }
         }
-        catch {
-
+        catch (error) {
+            console.error("Error fetching countries", error);
         }
     }
     useEffect(() => {
