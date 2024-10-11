@@ -66,7 +66,7 @@ export const LoginForm = () => {
                 <div className="text-center">
                     <p className="mt-2 text-sm text-gray-600">
                         {t('QuestionLog')}
-                        <LocalizedLink href="/register" className="text-indigo-500 hover:text-indigo-600">
+                        <LocalizedLink href="/register" className="text-indigo-500 hover:text-indigo-700">
                         {t('But2LogIn')}
                         </LocalizedLink>
                     </p>
