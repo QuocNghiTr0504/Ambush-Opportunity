@@ -30,7 +30,7 @@ export const LoginForm = () => {
 
         <div className="flex items-center justify-center w-96">
             <div className="w-full flex flex-col h-86 px-8 py-6 space-y-3 bg-white rounded-lg shadow-md">
-                <h1 className="text-2xl font-bold text-center">{t('TitLog')}</h1>
+                <h1 className="text-2xl font-bold text-center">{t('TitLog')} deloy test</h1>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-8 flex-1 py-4">
                     <div className="text-sm ">
                         <input
