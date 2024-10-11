@@ -23,8 +23,9 @@ const LearningShow = () => {
           </div>
 
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            {Array(6).fill(0).map((item, index) => (
-              <ShortFeatureCard key={index} title={t(`NameBox${index + 1}AtLearning`)} content={t(`TextBox${index + 1}AtLearning`)} />
+            {Array(6).fill(0).map((_, index) => (
+              <ShortFeatureCard key={index}
+              title={t(`NameBox${index + 1}AtLearning`)} content={t(`TextBox${index + 1}AtLearning`)} />
             ))}
           </div>
         </div>

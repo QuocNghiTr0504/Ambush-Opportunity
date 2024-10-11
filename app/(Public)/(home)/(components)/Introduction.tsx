@@ -23,8 +23,8 @@ export const Introduction = () => {
           </div>
         </motion.div>
         <div className="stars">
-          {Array(50).fill(0).map(i => (
-            <div key={i} className="star"></div>
+          {Array(50).fill(0).map((_, index) => (
+            <div key={index} className="star"></div>
           ))}
         </div>
       </div>

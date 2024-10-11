@@ -24,7 +24,7 @@ export const Introduction = () => {
         </motion.div>
         <div className="stars">
           {Array(50).fill(0).map(i => (
-            <div key={i} className="star"></div>
+            <div key={i.id} className="star"></div>
           ))}
         </div>
       </div>

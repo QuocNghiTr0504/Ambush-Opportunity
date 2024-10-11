@@ -22,7 +22,7 @@ const NavMenu = () => {
                 title="Menu"
                 placement="right"
                 onClose={closeDrawer}
-                visible={visible}
+                open={visible}
             >
                 <Menu mode="inline">
                     <Menu.Item key="1">
