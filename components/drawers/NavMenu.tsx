@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { MenuOutlined } from '@ant-design/icons';
 import { Drawer, Menu, Button } from 'antd';
-import Link from 'next/link';
 import { LocalizedLink } from '../commons/LocalizedLink';
+import { useTranslation } from 'react-i18next';
 
 const NavMenu = () => {
     const [visible, setVisible] = useState(false);
@@ -14,6 +14,53 @@ const NavMenu = () => {
     const closeDrawer = () => {
         setVisible(false);
     };
+    const {t} = useTranslation()
+    const items = [
+        {
+            key: '1',
+            label: (
+                <LocalizedLink
+                    href='/about'
+                    className='text-gray-700 text-2xl hover:text-red-900'
+                >
+                    <p className='text-lg'>{t('AboutAtHeader')}</p>
+                </LocalizedLink>
+            ),
+        },
+        {
+            key: '2',
+            label: (
+                <LocalizedLink
+                    href='/contact'
+                    className='text-gray-700 text-2xl hover:text-red-900'
+                >
+                    <p className='text-lg'>{t('ContactAtHeader')}</p>
+                </LocalizedLink>
+            ),
+        },
+        {
+            key: '3',
+            label: (
+                <LocalizedLink
+                    href='/login'
+                    className='text-gray-700 text-2xl hover:text-red-900'
+                >
+                    <p className='text-lg'>{t('SigninHeader')}</p>
+                </LocalizedLink>
+            ),
+        },
+        {
+            key: '4',
+            label: (
+                <LocalizedLink
+                    href='/register'
+                    className='text-gray-700 text-2xl hover:text-red-900'
+                >
+                    <p className='text-lg'>{t("SignupAtHeader")}</p>
+                </LocalizedLink>
+            ),
+        },
+    ];
 
     return (
         <div>
@@ -24,42 +71,7 @@ const NavMenu = () => {
                 onClose={closeDrawer}
                 open={visible}
             >
-                <Menu mode="inline">
-                    <Menu.Item key="1">
-                        <LocalizedLink
-                            href='/about'
-                            className='text-gray-700 text-2xl hover:text-red-900'
-                        >
-                            <p className='text-lg'>About</p>
-                        </LocalizedLink>
-                    </Menu.Item>
-                    <Menu.Item key="2">
-                        <LocalizedLink
-                            href='/contact'
-                            className='text-gray-700 text-2xl hover:text-red-900'
-                        >
-                            <p className='text-lg'>Contact</p>
-                        </LocalizedLink>
-                    </Menu.Item>
-                    <Menu.Item key="3">
-                        <LocalizedLink
-                            href='/login'
-                            className='text-gray-700 text-2xl hover:text-red-900'
-                        >
-                            <p className='text-lg'>Login</p>
-                        </LocalizedLink>
-                    </Menu.Item>
-                    <Menu.Item key="4">
-                        <LocalizedLink
-                            href='/register'
-                            className='text-gray-700 text-2xl hover:text-red-900'
-                        >
-                            <p className='text-lg'>Sign-up</p>
-                        </LocalizedLink>
-                    </Menu.Item>
-
-
-                </Menu>
+                <Menu mode="inline" items={items} />
             </Drawer>
         </div>
     );

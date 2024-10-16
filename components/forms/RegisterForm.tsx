@@ -6,7 +6,6 @@ import CountryCodeSelect from "../commons/CountryCodeSelect";
 import { validatePhoneNumber } from "@/helpers/phoneNumberValidator";
 import { fetchAuthTokenThunk, registerThunk } from "@/redux/slices/authSlice";
 import { AppDispatch } from "@/redux/store";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import CountrySelect from "../commons/CountrySelect";
 import { LocalizedLink } from "../commons/LocalizedLink";
