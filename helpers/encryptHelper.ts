@@ -19,8 +19,6 @@ export function encrypt(text: string, key: string) {
 export function getEncryptedData() {
     var dataToEncrypt = name + ':' + apiKey;
     var encryptedData = encrypt(dataToEncrypt, key);
-    console.log("nghi", name);
-    console.log("nghi1", encryptedData);
     return {
         platformName: name,
         encryptedData: encryptedData

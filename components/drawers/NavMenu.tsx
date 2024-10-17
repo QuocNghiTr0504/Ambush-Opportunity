@@ -3,6 +3,9 @@ import { MenuOutlined } from '@ant-design/icons';
 import { Drawer, Menu, Button } from 'antd';
 import { LocalizedLink } from '../commons/LocalizedLink';
 import { useTranslation } from 'react-i18next';
+import AmbushLogo from '@/public/assets/images/Ambush Opportunity_logo3_lightUse.png'
+import Image from 'next/image'
+
 
 const NavMenu = () => {
     const [visible, setVisible] = useState(false);
@@ -63,16 +66,16 @@ const NavMenu = () => {
     ];
 
     return (
-        <div>
-            <Button type="primary" onClick={showDrawer} icon={<MenuOutlined />} />
+        <div className='flex justify-around'>    
             <Drawer
-                title="Menu"
+                title={<Image src={AmbushLogo} alt="" className="max-w-[240px]" />}
                 placement="right"
                 onClose={closeDrawer}
                 open={visible}
             >
-                <Menu mode="inline" items={items} />
+                <Menu className='tracking-wider' mode="inline" items={items} />
             </Drawer>
+            <Button type="primary" className='flex justifly-end' onClick={showDrawer} icon={<MenuOutlined />} />
         </div>
     );
 };
