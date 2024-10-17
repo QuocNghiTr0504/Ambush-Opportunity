@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MenuOutlined } from '@ant-design/icons';
+import { CloseOutlined, MenuOutlined } from '@ant-design/icons';
 import { Drawer, Menu, Button } from 'antd';
 import { LocalizedLink } from '../commons/LocalizedLink';
 import { useTranslation } from 'react-i18next';
@@ -66,18 +66,32 @@ const NavMenu = () => {
     ];
 
     return (
-        <div className='flex justify-around'>    
-            <Drawer
-                title={<Image src={AmbushLogo} alt="" className="max-w-[240px]" />}
-                placement="right"
-                onClose={closeDrawer}
-                open={visible}
-            >
-                <Menu className='tracking-wider' mode="inline" items={items} />
-            </Drawer>
-            <Button type="primary" className='flex justifly-end' onClick={showDrawer} icon={<MenuOutlined />} />
+        <div className="">
+          <Drawer
+            title={
+              <div className="flex items-center w-full space-x-2">
+                <Button
+                  onClick={closeDrawer}
+                  icon={<CloseOutlined />}
+                  className='hover:text-red-500'
+                />
+                <Image src={AmbushLogo} alt="" className="max-w-[240px]" />
+              </div>
+            }
+            placement="right"
+            onClose={closeDrawer}
+            open={visible}
+            closeIcon={false} 
+          >
+            <Menu className="tracking-wider" mode="inline" items={items} />
+          </Drawer>
+          <Button
+            type="primary"
+            onClick={showDrawer}
+            icon={<MenuOutlined />}
+          />
         </div>
-    );
+      );
 };
 
 export default NavMenu;
